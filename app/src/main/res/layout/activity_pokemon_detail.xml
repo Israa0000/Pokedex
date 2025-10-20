@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".view.PokemonDetailActivity">
+
+    <!-- ImageView para mostrar la imagen del Pokémon -->
+    <ImageView
+        android:id="@+id/imagenPokemon"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitCenter"
+        tools:srcCompat="@drawable/machoke" /> <!-- Imagen de ejemplo para la vista previa -->
+
+    <!-- TextView para mostrar los datos (ID, Nombre, etc.) -->
+    <TextView
+        android:id="@+id/eDatosPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/pixelify_sans"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:lineSpacingExtra="8dp"
+        tools:text="ID: #67\nName: Machoke" /> <!-- Texto de ejemplo para la vista previa -->
+
+    <!-- Espacio flexible que empuja el botón hacia abajo -->
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Botón para volver a la lista -->
+    <Button
+        android:id="@+id/btnBackToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="back to list" />
+
+</LinearLayout>

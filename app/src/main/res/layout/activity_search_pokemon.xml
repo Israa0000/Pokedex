@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EE4426"
+    tools:context=".view.SearchPokemonActivity">
+
+    <!-- BOTONES: Estos ya estaban bien -->
+
+    <!-- EDITTEXT: ¡Corregido! -->
+
+    <Button
+        android:id="@+id/ByNameButton"
+        android:layout_width="200dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/pixelify_sans"
+        android:text="By Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnById"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- IMAGEVIEW: ¡Corregido! -->
+
+    <!-- TEXTVIEW: Este ya estaba bien, pero lo ajusto para que quede mejor -->
+    <Button
+        android:id="@+id/btnById"
+        android:layout_width="106dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/pixelify_sans"
+        android:text="By Id"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/ByNameButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:fontFamily="@font/pixelify_sans"
+        android:hint="Search"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ByNameButton" />
+
+    <ImageView
+        android:id="@+id/spritePokemon"
+        android:layout_width="210dp"
+        android:layout_height="262dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Search"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/machoke"
+        tools:srcCompat="@drawable/machoke" />
+
+    <TextView
+        android:id="@+id/datosPokemon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="132dp"
+        android:fontFamily="@font/pixelify_sans"
+        android:gravity="center"
+        android:text="Id, datos, nombre, machoke gitano"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGoBackToMenu"
+        android:layout_width="295dp"
+        android:layout_height="64dp"
+        android:text="Go back to menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
