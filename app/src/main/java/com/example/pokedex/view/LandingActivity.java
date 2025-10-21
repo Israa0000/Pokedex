@@ -1,5 +1,7 @@
 package com.example.pokedex.view;
 
+import static com.example.pokedex.controller.API.getMyPokedex;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -63,8 +65,8 @@ public class LandingActivity extends AppCompatActivity {
         checkDataLoadedRunnable = new Runnable() {
             @Override
             public void run() {
-                ArrayList<Pokemon> pokedex = API.getMyPokedex();
-                // Comprobamos si la lista ya se ha llenado.
+                ArrayList<Pokemon> pokedex = getMyPokedex();
+                // se comprueba si la lista ya se ha llenado.
                 if (pokedex.size() >= 1028) {
 
                     Log.d("LandingActivity", "Carga de datos completada. Total: " + pokedex.size() + " Pokémon.");
@@ -83,12 +85,12 @@ public class LandingActivity extends AppCompatActivity {
                 } else {
                     // Si los datos aún no están listos se vuelve a ejecutar lacomprobación despues de un segundo
 
-                    handler.postDelayed(this, 1000); // 1000 ms = 1 segundo
+                    handler.postDelayed(this, 1000); //1000ms = 1 segundo
                 }
             }
         };
 
-        // Iniciar la primera verificación.
+        // enmpezar la primera verificación.
         handler.post(checkDataLoadedRunnable);
     }
 

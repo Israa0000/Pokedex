@@ -21,12 +21,11 @@ public class API {
     static String TAG = "API_Pokedex";
 
     public static void loadPokedexData(Context ct) {
-        // Limpiamos la lista para evitar duplicados si se llama mucjas veces.
+        // limpiamos la lista para evitar duplicados si se llama mucjas veces.
         if (myPokedex.isEmpty()) {
             obtainAllPokemonURLs(ct);
         }
     }
-
 
     static void obtainAllPokemonURLs(Context ct) {
         RequestQueue queue = Volley.newRequestQueue(ct);

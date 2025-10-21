@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.pokedex.R;
-import com.example.pokedex.controller.API;
 import com.example.pokedex.model.Pokemon;
 
 import java.util.ArrayList;
@@ -35,7 +34,7 @@ public class ShowAllPokemonsActivity extends AppCompatActivity {
     int currentlyDisplayedPokemons = 0;// cuanta los pokemons q se muestran
 
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId")//Anotaciones que indican cosas de la funcion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +48,7 @@ public class ShowAllPokemonsActivity extends AppCompatActivity {
         setupData();
         setupListeners();
 
-        displayNextPage();
+        showNextPage();
     }
 
     void setupData() {
@@ -62,11 +61,11 @@ public class ShowAllPokemonsActivity extends AppCompatActivity {
             finish();
         });
         btnLoadMore.setOnClickListener(v -> {
-            displayNextPage();
+            showNextPage();
         });
     }
 
-    void displayNextPage(){
+    void showNextPage(){
         if (fullPokedex.isEmpty()){
             btnLoadMore.setVisibility(View.GONE);
             return;
